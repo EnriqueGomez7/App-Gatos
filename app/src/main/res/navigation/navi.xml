@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi"
+    app:startDestination="@id/fragment__Principal">
+
+    <fragment
+        android:id="@+id/fragment_Detalle"
+        android:name="com.example.apigato.ui.fragments.Fragment_Detalle"
+        android:label="fragment_Detalle"
+        tools:layout="@layout/fragment__detalle" />
+    <fragment
+        android:id="@+id/fragment__Principal"
+        android:name="com.example.apigato.ui.fragments.Fragment_Principal"
+        android:label="Raza de Gatos"
+        tools:layout="@layout/fragment__principal">
+        <action
+            android:id="@+id/action_fragment_Principal_to_fragment_Detalle"
+            app:destination="@id/fragment_Detalle" />
+        <action
+            android:id="@+id/action_fragment__Principal_to_fragment_Votos"
+            app:destination="@id/fragment_Votos" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Votos"
+        android:name="com.example.apigato.ui.fragments.Fragment_Votos"
+        android:label="fragment__votos"
+        tools:layout="@layout/fragment__votos" />
+</navigation>
